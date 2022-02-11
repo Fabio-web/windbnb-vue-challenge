@@ -76,16 +76,19 @@ export default Vue.extend({
    components: { Button, Input },
    data() {
       return {
-         isSearch: true
+         isSearch: false
       }
    },
    mounted() {
       this.$nuxt.$on("search", this.toggle)
-      document.body.style.overflowY = this.isSearch ? "hidden" : ""
+      this.setOverflowY()
    },
    methods: {
       toggle() {
          this.isSearch = !this.isSearch
+         this.setOverflowY()
+      },
+      setOverflowY() {
          document.body.style.overflowY = this.isSearch ? "hidden" : ""
       }
    }
