@@ -2,7 +2,7 @@
    <div class="homePage">
       <div class="titlePage">
          <h2>Stays in Finland</h2>
-         <span>+12 stays</span>
+         <span>+{{ properties.length }} stays</span>
       </div>
       <div class="properties">
          <div class="property" v-for="(property, key) in properties" :key="key">
