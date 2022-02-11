@@ -1,19 +1,20 @@
 <template>
    <div id="app">
-      <Nuxt/>
+      <Header/>
+      <div class="container">
+         <Nuxt/>
+      </div>
+      <Footer/>
    </div>
 </template>
-
-<style lang="scss">
-@import "@/assets/scss/app.scss";
-</style>
 
 <script>
 import Vue from "vue"
 import Header from "../components/layouts/header"
+import Footer from "~/components/layouts/footer"
 
 export default Vue.extend({
    layout: "default",
-   components: { Header }
+   components: { Footer, Header }
 })
 </script>

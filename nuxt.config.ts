@@ -5,7 +5,7 @@ const config: NuxtConfig = {
 
    head: {
       title: "Home",
-      titleTemplate: "Windbnb - %s",
+      titleTemplate: "%s - Windbnb",
       htmlAttrs: {
          lang: "en",
       },
@@ -22,7 +22,12 @@ const config: NuxtConfig = {
 
    css: [],
 
-   scss: [],
+   styleResources: {
+      scss: [
+         './assets/scss/config/*.scss',
+         './assets/scss/app.scss'
+      ],
+   },
 
    plugins: [],
 
@@ -31,6 +36,7 @@ const config: NuxtConfig = {
    buildModules: [
       "@nuxt/typescript-build",
       "@nuxtjs/google-fonts",
+      '@nuxtjs/style-resources',
    ],
 
    modules: [],
@@ -43,7 +49,7 @@ const config: NuxtConfig = {
          Mulish: [400],
          "Material+Icons": true,
          "Material+Icons+Outlined": true,
-         "Material+Icons+Rounded": true,
+         "Material+Icons+Round": true,
          "Material+Icons+Sharp": true,
          "Material+Icons+Two+Tone": true,
       },

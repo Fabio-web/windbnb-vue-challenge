@@ -1,2 +1,43 @@
 header {
+   height: 120px;
+
+   .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+
+      .search {
+         height: 55px;
+         box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+         border-radius: 16px;
+
+         display: flex;
+         align-items: center;
+
+         cursor: pointer;
+
+         div {
+            padding: 19px 16px;
+
+            &:not(:last-child) {
+               font-family: $font-family-secondary;
+               color: #BDBDBD;
+               font-size: 14px;
+
+               &:not(&.placeholder) {
+                  color: $color-text-black;
+               }
+            }
+
+            &:nth-child(2), &:nth-child(1) {
+               border-right: 1px solid #F2F2F2;
+            }
+
+            &:last-child {
+               color: $color-primary;
+            }
+         }
+      }
+   }
 }
