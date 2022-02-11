@@ -1,10 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
-
 $default-color: #E0E0E0;
 $default-color-dark: #AEAEAE;
 
-$blue-color: #3D5AFE;
-$blue-color-dark: #0039CB;
+$primary-color: $color-primary;
+$primary-color-dark: darken($color-primary, 5%);
 
 $grey-color: #455A64;
 $grey-color-dark: #1C313A;
@@ -13,17 +11,20 @@ $red-color: #D32F2F;
 $red-color-dark: #9A0007;
 
 .button {
-   font-family: "Noto Sans JP", sans-serif;
-   background-color: $blue-color;
-   padding: 8px 16px;
+   background-color: $primary-color;
+   font-family: $font-family-secondary;
+   padding: 17.5px 27px;
 
    border: none;
-   border-radius: 6px;
+   border-radius: 16px;
+   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
 
    color: #ffffff;
 
-   font-weight: 500;
-   font-size: 14px;
+   font: {
+      weight: 700;
+      size: 14px;
+   }
 
    cursor: pointer;
 
@@ -32,12 +33,12 @@ $red-color-dark: #9A0007;
    gap: 10px;
 
    span[class^=material-icons] {
-      font-size: 16px;
+      font-size: 22px;
    }
 
    &:hover {
-      background: $blue-color-dark;
-      box-shadow: 0 2px 3px rgba(41, 98, 255, 0.2);
+      background: $primary-color-dark;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
    }
 
    &.normal, &.default {
@@ -52,26 +53,26 @@ $red-color-dark: #9A0007;
 
    &.outline {
       background-color: #ffffff;
-      border: 1px solid $blue-color;
+      border: 1px solid $primary-color;
       border-radius: 6px;
-      color: $blue-color;
+      color: $primary-color;
    }
 
    &.text:not(:hover) {
       background-color: #ffffff !important;
       border: none;
-      color: $blue-color-dark;
+      color: $primary-color-dark;
    }
 
    &.text:hover, &.outline:hover {
-      background-color: rgba($blue-color-dark, 0.1) !important;
+      background-color: rgba($primary-color-dark, 0.1) !important;
       box-shadow: none !important;
-      color: $blue-color;
+      color: $primary-color;
    }
 
    &.disableShadow,
    &.disableShadow:hover {
-      background-color: $blue-color !important;
+      background-color: $primary-color !important;
       color: #ffffff;
       box-shadow: none !important;
    }

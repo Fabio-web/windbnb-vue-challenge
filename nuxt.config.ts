@@ -46,7 +46,7 @@ const config: NuxtConfig = {
    googleFonts: {
       families: {
          Montserrat: [500, 600, 700],
-         Mulish: [400],
+         Mulish: [400, 800],
          "Material+Icons": true,
          "Material+Icons+Outlined": true,
          "Material+Icons+Round": true,
