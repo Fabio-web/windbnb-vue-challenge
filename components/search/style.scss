@@ -16,6 +16,9 @@
       background-color: white;
       padding: 90px 0;
 
+      transform: translateY(-500px);
+      transition: 0.5s ease-in-out;
+
       .content {
          display: flex;
          flex-direction: column;

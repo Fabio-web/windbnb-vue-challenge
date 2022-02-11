@@ -8,14 +8,14 @@
    ]">
       <span class="label">{{ label }}</span>
 
-      <textarea v-if="multiline" :name="name"
+      <textarea v-if="multiline" :name="label.toLowerCase()"
                 class="item"
                 :rows="row" :placeholder="placeholder">{{ value }}</textarea>
 
       <input v-else class="item" type="text" label=""
              :placeholder="placeholder"
              :disabled="disabled" :rows="row"
-             :name="name" :value="value"/>
+             :name="label.toLowerCase()" :value="value"/>
    </label>
 </template>
 

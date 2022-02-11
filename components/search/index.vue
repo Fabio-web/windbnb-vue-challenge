@@ -1,7 +1,7 @@
 <template>
-   <div class="searchComponent" v-if="isSearch">
-      <div class="background" @click="toggle"></div>
-      <div class="inner">
+   <div class="searchComponent">
+      <div class="background" @click="toggle" v-show="isSearch"></div>
+      <div ref="search" class="inner">
          <div class="container">
             <div class="content">
                <div class="form">
@@ -81,15 +81,20 @@ export default Vue.extend({
    },
    mounted() {
       this.$nuxt.$on("search", this.toggle)
-      this.setOverflowY()
+      this.setTransform()
    },
    methods: {
       toggle() {
          this.isSearch = !this.isSearch
-         this.setOverflowY()
+         this.setTransform()
       },
-      setOverflowY() {
+      async setOverflowY() {
+         await new Promise(resolve => setTimeout(resolve, this.isSearch ? 0 : 500))
          document.body.style.overflowY = this.isSearch ? "hidden" : ""
+      },
+      async setTransform() {
+         this.$refs.search.style.transform = `translateY(${this.isSearch ? "0" : "-500"}px)`
+         await this.setOverflowY()
       }
    }
 })
