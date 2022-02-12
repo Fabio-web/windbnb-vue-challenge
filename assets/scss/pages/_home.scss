@@ -26,6 +26,14 @@
          flex-direction: column;
          gap: 15px;
 
+         @media (max-width: 1310px) {
+            flex: 0 0 calc(100%/2 - 32px/2);
+         }
+
+         @media (max-width: 1010px) {
+            flex: 0 0 100%;
+         }
+
          .thumbnail {
             width: 100%;
             height: 270px;

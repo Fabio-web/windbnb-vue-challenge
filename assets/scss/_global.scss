@@ -2,4 +2,12 @@
    display: block;
    width: 1260px;
    margin: 0 auto;
+
+   @media (max-width: 1310px) {
+      width: 960px;
+   }
+
+   @media (max-width: 1010px) {
+      width: 80%;
+   }
 }
