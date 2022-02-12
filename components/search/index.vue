@@ -93,7 +93,7 @@ export default Vue.extend({
          document.body.style.overflowY = this.isSearch ? "hidden" : ""
       },
       async setTransform() {
-         this.$refs.search.style.transform = `translateY(${this.isSearch ? "0" : "-500"}px)`
+         this.$refs.search.style.transform = `translateY(${this.isSearch ? "0" : "-750"}px)`
          await this.setOverflowY()
       }
    }
